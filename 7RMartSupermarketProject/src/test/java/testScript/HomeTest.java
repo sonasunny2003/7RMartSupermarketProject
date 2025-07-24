@@ -1,0 +1,32 @@
+package testScript;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import base.BaseClass;
+import pages.HomePage;
+import pages.LoginPage;
+import utilities.ExcelUtility;
+
+public class HomeTest extends BaseClass{
+
+	@Test
+	public void verifyUserCanLogoutSuccessfully() throws IOException
+	{
+		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
+		String password=ExcelUtility.getStringData(0, 1, "LoginPage");
+		
+		LoginPage login=new LoginPage(driver);
+		login.enterUserNameOnUserNameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.selectCheckBox();
+		login.clickSignInButton();
+		
+		HomePage home=new HomePage(driver);
+		home.clickOnAdmin();
+		home.clickOnLogout();
+		
+	}
+	
+}
