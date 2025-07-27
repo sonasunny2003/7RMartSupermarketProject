@@ -13,7 +13,7 @@ import utilities.FakerUtility;
 
 public class AdminUsersTest extends BaseClass{
 
-	@Test
+	@Test(description="Verify the user is able to add new admin users")
 	public void verifyWhetherTheUserIsAbleToAddNewAdminUsers() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -45,7 +45,7 @@ public class AdminUsersTest extends BaseClass{
 		Assert.assertTrue(greenalert,"The user was unable to add new admin users successfully");
 	}
 	
-	@Test
+	@Test(description="Verify the user is able to find the added admin users through search")
 	public void verifyTheUserCanSearchAddedAdminUsers() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");

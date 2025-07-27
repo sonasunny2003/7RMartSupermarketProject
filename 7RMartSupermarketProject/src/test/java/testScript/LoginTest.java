@@ -11,7 +11,7 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends BaseClass {
 
-	@Test(retryAnalyzer=retry.Retry.class)
+	@Test(retryAnalyzer=retry.Retry.class,priority=1,description="Verifying user login with valid credentials")
 	public void verifyLoginWithValidCredentials() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -31,7 +31,7 @@ public class LoginTest extends BaseClass {
 		//Assert.assertFalse(alertdisplayed, "User was unable to login with valid credentials");
 	}
 	
-	@Test
+	@Test(priority=2,description="Verifying user login with valid username and invalid password",groups= {"smoke"})
 	public void verifyLoginWithValidUserNameAndInvalidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -50,7 +50,7 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actual, expected,"User was able to login with invalid password");
 	}
 	
-	@Test
+	@Test(priority=3,description="Verifying user login with invalid username and valid password",groups= {"smoke"})
 	public void verifyLoginWithInvalidUserNameAndValidPassword() throws IOException
 	{
 		String username=ExcelUtility.getStringData(2, 0, "LoginPage");
@@ -69,7 +69,7 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actual, expected,"User was able to login with invalid username");
 	}
 	
-	@Test
+	@Test(priority=4,description="Verifying user login with ivalid credentials")
 	public void verifyLoginWithInvalidCredentials() throws IOException
 	{
 		String username=ExcelUtility.getStringData(3, 0, "LoginPage");

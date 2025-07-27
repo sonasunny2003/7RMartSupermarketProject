@@ -1,10 +1,15 @@
 package pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import constant.Constants;
+import utilities.ExcelUtility;
 
 
 public class ManageCategoryPage {
@@ -41,14 +46,15 @@ public class ManageCategoryPage {
 		newbutton.click();
 	}
 	
-	public void enterTextInCategory()
+	public void enterTextInCategory() throws IOException
 	{
-		categoryfield.sendKeys("Toys");
+		String category1=ExcelUtility.getStringData(0, 0, "categoryName");
+		categoryfield.sendKeys(category1);
 	}
 	
 	public void selectFile()
 	{
-		choosefile.sendKeys("C:\\Users\\sona\\eclipse-workspace\\7RMartSupermarketProject\\src\\test\\resources\\image.jpg");
+		choosefile.sendKeys(Constants.IMAGEFILE);
 	}
 	
 	public void clickSaveButton()
@@ -56,7 +62,7 @@ public class ManageCategoryPage {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,950)","");
 		js.executeScript("arguments[0].click();", savebutton);
-		savebutton.click();
+		
 	}
 	
 	/*public String getTitle()

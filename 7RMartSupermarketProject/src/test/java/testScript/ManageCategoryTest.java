@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends BaseClass {
 
-	@Test
+	@Test(description="Verify the user is able to add a new category to the category page")
 	public void addingNewCategoryToTheCategoryPage() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -39,7 +39,7 @@ public class ManageCategoryTest extends BaseClass {
 		
 	}
 	
-	@Test
+	@Test(description="Verify the user is able to find the added category through search")
 	public void searchingTheAddedCategory() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");

@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends BaseClass{
 
-	@Test
+	@Test(description="Verify the user is able to add new news to the news page")
 	public void verifyWhetherTheUserIsAbleToaddNewNews() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
@@ -35,7 +35,7 @@ public class ManageNewsTest extends BaseClass{
 		Assert.assertTrue(greenalert,"The user was unable to add news");
 	}
 	
-	@Test
+	@Test(description="Verify the user is able to find the added news through search")
 	public void verifyUserIsAbleTosearchAddedNews() throws IOException
 	{
 		String username=ExcelUtility.getStringData(0, 0, "LoginPage");
