@@ -5,15 +5,17 @@
     <listener class-name="reportGeneration.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testScript.ManageCategoryTest">
+      <class name="testScript.AdminUsersTest">
         <methods>
           <include name="driverQuit"/>
-          <include name="searchingTheAddedCategory"/>
-          <include name="addingNewCategoryToTheCategoryPage"/>
+          <include name="verifyResetOptionOnAdminUsersPage"/>
+          <include name="verifyWhetherTheUserIsAbleToAddNewAdminUsers"/>
           <include name="browserLaunch"/>
+          <include name="verifyTheUserCanSearchAddedAdminUsers"/>
         </methods>
-      </class> <!-- testScript.ManageCategoryTest -->
+      </class> <!-- testScript.AdminUsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

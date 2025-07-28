@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import constant.Messages;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtility;
@@ -32,7 +33,7 @@ public class ManageNewsTest extends BaseClass{
 		news.clickOnSaveButton();
 		
 		boolean greenalert=news.checkAlertMessage();
-		Assert.assertTrue(greenalert,"The user was unable to add news");
+		Assert.assertTrue(greenalert,Messages.NEWSADDERROR);
 	}
 	
 	@Test(description="Verify the user is able to find the added news through search")
@@ -56,7 +57,7 @@ public class ManageNewsTest extends BaseClass{
 		
 		String actual="New Software Launched";
 		String expected=news.checkTitle();
-		Assert.assertEquals(actual, expected,"The user was unable to find the added news");
+		Assert.assertEquals(actual, expected,Messages.NEWSSEARCHERROR);
 	}
 	
 	

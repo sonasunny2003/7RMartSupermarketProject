@@ -32,6 +32,9 @@ public class AdminUsersPage {
 	@FindBy(xpath="//button[@name='Search']")WebElement searchadminuser;
 	@FindBy(xpath="//td[text()='sonasunny']")WebElement text;
 	
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetbutton;
+	@FindBy(xpath="//h1[text()='Admin Users']")WebElement heading;
+	
 	
 	public void clickOnAdminUsersTab()
 	{
@@ -97,5 +100,15 @@ public class AdminUsersPage {
 	public String getTextFromThePage()
 	{
 		return text.getText();
+	}
+	
+	public void clickOnResetButton()
+	{
+		resetbutton.click();
+	}
+	
+	public boolean checkTitle()
+	{
+		return heading.isDisplayed();
 	}
 }

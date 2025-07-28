@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import constant.Messages;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -25,7 +26,7 @@ public class LoginTest extends BaseClass {
 		login.clickSignInButton();
 		
 		boolean dashboarddisplayed=login.isDashBoardTileDisplayed();
-		Assert.assertTrue(dashboarddisplayed, "User was unable to login with valid credentials");
+		Assert.assertTrue(dashboarddisplayed, Messages.VALIDCREDENTIALSERROR);
 		
 		//boolean alertdisplayed=login.isAlertDisplayed();
 		//Assert.assertFalse(alertdisplayed, "User was unable to login with valid credentials");
@@ -47,7 +48,7 @@ public class LoginTest extends BaseClass {
 		String expected="7rmart supermarket";
 		String actual=login.getTextFromTitle();
 		
-		Assert.assertEquals(actual, expected,"User was able to login with invalid password");
+		Assert.assertEquals(actual, expected,Messages.INVALIDPASSWORDERROR);
 	}
 	
 	@Test(priority=3,description="Verifying user login with invalid username and valid password",groups= {"smoke"})
@@ -66,7 +67,7 @@ public class LoginTest extends BaseClass {
 		String expected="7rmart supermarket";
 		String actual=login.getTextFromTitle();
 		
-		Assert.assertEquals(actual, expected,"User was able to login with invalid username");
+		Assert.assertEquals(actual, expected,Messages.INVALIDUSERNAMEERROR);
 	}
 	
 	@Test(priority=4,description="Verifying user login with ivalid credentials")
@@ -85,6 +86,6 @@ public class LoginTest extends BaseClass {
 		String expected="7rmart supermarket";
 		String actual=login.getTextFromTitle();
 		
-		Assert.assertEquals(actual, expected,"User was able to login with invalid credentials");
+		Assert.assertEquals(actual, expected,Messages.INVALIDCREDENTIALSERROR);
 	}
 }

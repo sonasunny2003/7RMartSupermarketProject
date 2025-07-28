@@ -18,6 +18,8 @@ public class HomePage {
 	@FindBy(xpath="//a[@data-toggle='dropdown']")WebElement admin;                                             //It’s a dropdown toggle element that looks like a link but works like a button.
 	@FindBy(xpath="//i[@class='ace-icon fa fa-power-off']")WebElement logout;
 	
+	@FindBy(xpath="//b[text()='7rmart supermarket']")WebElement heading;
+	
 	public void clickOnAdmin()
 	{
 		admin.click();
@@ -26,5 +28,10 @@ public class HomePage {
 	public void clickOnLogout()
 	{
 		logout.click();
+	}
+	
+	public boolean checkTitle()
+	{
+		return heading.isDisplayed();
 	}
 }

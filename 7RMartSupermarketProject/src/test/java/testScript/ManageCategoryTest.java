@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import constant.Messages;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
@@ -60,6 +61,6 @@ public class ManageCategoryTest extends BaseClass {
 		
 		String expected="Dress";
 		String actual=category.checkTitle();
-		Assert.assertEquals(actual, expected,"The user was unable to find the category through search");
+		Assert.assertEquals(actual, expected,Messages.CATEGORYSEARCHERROR);
 	}
 }

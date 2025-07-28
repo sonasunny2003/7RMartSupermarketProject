@@ -2,9 +2,11 @@ package testScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
+import constant.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -26,6 +28,9 @@ public class HomeTest extends BaseClass{
 		HomePage home=new HomePage(driver);
 		home.clickOnAdmin();
 		home.clickOnLogout();
+		
+		boolean headingisdisplayed=home.checkTitle();
+		Assert.assertTrue(headingisdisplayed,Messages.LOGOUTERROR);
 		
 	}
 	

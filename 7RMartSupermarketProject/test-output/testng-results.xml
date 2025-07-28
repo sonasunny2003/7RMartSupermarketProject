@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T14:07:34 IST" name="grouping" finished-at="2025-07-25T14:08:15 IST" duration-ms="41222">
+  <suite started-at="2025-07-28T12:19:59 IST" name="Suite" finished-at="2025-07-28T12:20:07 IST" duration-ms="8092">
     <groups>
-      <group name="smoke">
-        <method signature="LoginTest.verifyLoginWithValidUserNameAndInvalidPassword()[pri:2, instance:testScript.LoginTest@59474f18]" name="verifyLoginWithValidUserNameAndInvalidPassword" class="testScript.LoginTest"/>
-        <method signature="LoginTest.verifyLoginWithInvalidUserNameAndValidPassword()[pri:3, instance:testScript.LoginTest@59474f18]" name="verifyLoginWithInvalidUserNameAndValidPassword" class="testScript.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-07-25T14:07:34 IST" name="Test" finished-at="2025-07-25T14:08:15 IST" duration-ms="41222">
-      <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:07:34 IST" name="browserLaunch" finished-at="2025-07-25T14:08:04 IST" duration-ms="30460" status="PASS">
+    <test started-at="2025-07-28T12:19:59 IST" name="Test" finished-at="2025-07-28T12:20:07 IST" duration-ms="8092">
+      <class name="testScript.AdminUsersTest">
+        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:19:59 IST" name="browserLaunch" finished-at="2025-07-28T12:20:02 IST" duration-ms="2435" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyLoginWithValidUserNameAndInvalidPassword()[pri:2, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:08:04 IST" name="verifyLoginWithValidUserNameAndInvalidPassword" description="Verifying user login with valid username and invalid password" finished-at="2025-07-25T14:08:04 IST" duration-ms="31" status="FAIL">
+        <test-method signature="verifyResetOptionOnAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="verifyResetOptionOnAdminUsersPage" description="Verify that the user is able to reset the page by clicking the Reset button" finished-at="2025-07-28T12:20:02 IST" duration-ms="25" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
@@ -34,7 +30,7 @@ at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
 at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testScript.LoginTest.verifyLoginWithValidUserNameAndInvalidPassword(LoginTest.java:37)
+at testScript.AdminUsersTest.verifyResetOptionOnAdminUsersPage(AdminUsersTest.java:76)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -66,19 +62,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithValidUserNameAndInvalidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:08:04 IST" name="driverQuit" finished-at="2025-07-25T14:08:06 IST" duration-ms="1564" status="PASS">
+        </test-method> <!-- verifyResetOptionOnAdminUsersPage -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="driverQuit" finished-at="2025-07-28T12:20:02 IST" duration-ms="671" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithValidUserNameAndInvalidPassword status=FAILURE method=LoginTest.verifyLoginWithValidUserNameAndInvalidPassword()[pri:2, instance:testScript.LoginTest@59474f18] output={null}]]]>
+                <![CDATA[[TestResult name=verifyResetOptionOnAdminUsersPage status=FAILURE method=AdminUsersTest.verifyResetOptionOnAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:08:06 IST" name="browserLaunch" finished-at="2025-07-25T14:08:14 IST" duration-ms="8617" status="PASS">
+        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="browserLaunch" finished-at="2025-07-28T12:20:04 IST" duration-ms="1760" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,7 +85,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyLoginWithInvalidUserNameAndValidPassword()[pri:3, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:08:14 IST" name="verifyLoginWithInvalidUserNameAndValidPassword" description="Verifying user login with invalid username and valid password" finished-at="2025-07-25T14:08:14 IST" duration-ms="6" status="FAIL">
+        <test-method signature="verifyTheUserCanSearchAddedAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:04 IST" name="verifyTheUserCanSearchAddedAdminUsers" description="Verify the user is able to find the added admin users through search" finished-at="2025-07-28T12:20:04 IST" duration-ms="5" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
@@ -101,7 +97,7 @@ at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
 at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testScript.LoginTest.verifyLoginWithInvalidUserNameAndValidPassword(LoginTest.java:56)
+at testScript.AdminUsersTest.verifyTheUserCanSearchAddedAdminUsers(AdminUsersTest.java:51)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -133,19 +129,86 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidUserNameAndValidPassword -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@59474f18]" started-at="2025-07-25T14:08:14 IST" name="driverQuit" finished-at="2025-07-25T14:08:15 IST" duration-ms="401" status="PASS">
+        </test-method> <!-- verifyTheUserCanSearchAddedAdminUsers -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:04 IST" name="driverQuit" finished-at="2025-07-28T12:20:05 IST" duration-ms="726" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUserNameAndValidPassword status=FAILURE method=LoginTest.verifyLoginWithInvalidUserNameAndValidPassword()[pri:3, instance:testScript.LoginTest@59474f18] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserCanSearchAddedAdminUsers status=FAILURE method=AdminUsersTest.verifyTheUserCanSearchAddedAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.LoginTest -->
+        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:05 IST" name="browserLaunch" finished-at="2025-07-28T12:20:06 IST" duration-ms="1673" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method signature="verifyWhetherTheUserIsAbleToAddNewAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:06 IST" name="verifyWhetherTheUserIsAbleToAddNewAdminUsers" description="Verify the user is able to add new admin users" finished-at="2025-07-28T12:20:06 IST" duration-ms="3" status="FAIL">
+          <exception class="java.io.FileNotFoundException">
+            <message>
+              <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.io.FileNotFoundException: C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)
+at java.base/java.io.FileInputStream.open0(Native Method)
+at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
+at testScript.AdminUsersTest.verifyWhetherTheUserIsAbleToAddNewAdminUsers(AdminUsersTest.java:19)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.io.FileNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWhetherTheUserIsAbleToAddNewAdminUsers -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:06 IST" name="driverQuit" finished-at="2025-07-28T12:20:07 IST" duration-ms="726" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddNewAdminUsers status=FAILURE method=AdminUsersTest.verifyWhetherTheUserIsAbleToAddNewAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testScript.AdminUsersTest -->
     </test> <!-- Test -->
-  </suite> <!-- grouping -->
+  </suite> <!-- Suite -->
 </testng-results>
