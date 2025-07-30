@@ -10,42 +10,42 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 
-	public static int EXPLICITWAIT=5;
-	
-	public void waitUntilElementToBeClickable(WebDriver driver,WebElement element)
-	{
+	public static int EXPLICITWAIT = 5;
+
+	public void waitUntilElementToBeClickable(WebDriver driver, WebElement element) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
-	public void waitUntilAlertToBePresent(WebDriver driver)
-	{
+
+	public void waitUntilAlertToBePresent(WebDriver driver) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
-	
-	public void waitUntilElementToBeSelected(WebDriver driver,WebElement element)
-	{
+
+	public void waitUntilElementToBeSelected(WebDriver driver, WebElement element) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.elementToBeSelected(element));
 	}
-	
-	public void waitUntilFrameToBeAvailableAndToSwitchIt(WebDriver driver,WebElement frame)
-	{
+
+	public void waitUntilFrameToBeAvailableAndToSwitchIt(WebDriver driver, WebElement frame) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
 	}
-	
-	public void waitUntilThePresenceOfElement(WebDriver driver,WebElement element)
-	{
+
+	public void waitUntilThePresenceOfElement(WebDriver driver, WebElement element) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.presenceOfElementLocated((By) element));
 	}
-	
-	public void waitUntilTheUriMatches(WebDriver driver,String url)
-	{
+
+	public void waitUntilTheUriMatches(WebDriver driver, String url) {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.urlMatches(url));
 	}
-	
+
 }

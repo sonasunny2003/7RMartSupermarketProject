@@ -13,7 +13,7 @@ public class ExtentReportUtility {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html");
 		reporter.config().setReportName("7RMartSupermarketProject");
 		extentReports.attachReporter(reporter);
-		
+
 		extentReports.setSystemInfo("Organization", "Obsqura");
 		extentReports.setSystemInfo("Name", " Sona"); // provides context of the report
 		return extentReports;

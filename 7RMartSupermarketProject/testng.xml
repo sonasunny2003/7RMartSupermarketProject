@@ -7,7 +7,7 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="testScript.AdminUsersTest">
+      <class name="testScript.LoginTest"><methods><include name="verifyLoginWithInvalidCredentials"></include></methods>
       </class>
     </classes>
   </test> <!-- Test -->

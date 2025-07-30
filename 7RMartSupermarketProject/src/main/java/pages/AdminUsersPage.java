@@ -7,108 +7,127 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constant.Constants;
+import utilities.PageUtility;
+
 public class AdminUsersPage {
 
 	public WebDriver driver;
-	
-	public AdminUsersPage(WebDriver driver)
-	{
-		this.driver=driver;
+
+	PageUtility page = new PageUtility();
+
+	public AdminUsersPage(WebDriver driver) {
+
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement adminuser;
-	
-	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newbutton;
-	@FindBy(xpath="//input[@id='username']")WebElement username;
-	@FindBy(xpath="//input[@id='password']")WebElement password;
-	@FindBy(xpath="//select[@id='user_type']")WebElement usertype;
-	@FindBy(xpath="//button[@name='Create']")WebElement savebutton;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
-	
-	@FindBy(xpath="//a[@onclick='click_button(2)']")WebElement searchbutton;
-	@FindBy(xpath="//input[@id='un']")WebElement username1;
-	@FindBy(xpath="//select[@id='ut']")WebElement usertype1;
-	@FindBy(xpath="//button[@name='Search']")WebElement searchadminuser;
-	@FindBy(xpath="//td[text()='sonasunny']")WebElement text;
-	
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetbutton;
-	@FindBy(xpath="//h1[text()='Admin Users']")WebElement heading;
-	
-	
-	public void clickOnAdminUsersTab()
-	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", adminuser);
-		
+
+	@FindBy(xpath = "//a[@onclick='click_button(1)']")
+	WebElement newbutton;
+	@FindBy(xpath = "//input[@id='username']")
+	WebElement username;
+	@FindBy(xpath = "//input[@id='password']")
+	WebElement password;
+	@FindBy(xpath = "//select[@id='user_type']")
+	WebElement usertype;
+	@FindBy(xpath = "//button[@name='Create']")
+	WebElement savebutton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement alert;
+
+	@FindBy(xpath = "//a[@onclick='click_button(2)']")
+	WebElement searchbutton;
+	@FindBy(xpath = "//input[@id='un']")
+	WebElement username1;
+	@FindBy(xpath = "//select[@id='ut']")
+	WebElement usertype1;
+	@FindBy(xpath = "//button[@name='Search']")
+	WebElement searchadminuser;
+	@FindBy(xpath = "//h4[text()='Search Admin Users']")
+	WebElement checktext;
+
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
+	WebElement resetbutton;
+	@FindBy(xpath = "//h1[text()='Admin Users']")
+	WebElement heading;
+
+	public AdminUsersPage clickOnNewButton() {
+
+		page.clickElementByJS(driver, newbutton);
+		return this;
 	}
-	
-	public void clickOnNewButton()
-	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", newbutton);
-		
-	}
-	
-	public void enterNewUserNameOnUserNameField(String newUserName)
-	{
+
+	public AdminUsersPage enterNewUserNameOnUserNameField(String newUserName) {
+
 		username.sendKeys(newUserName);
+		return this;
 	}
-	
-	public void enterNewPasswordOnPasswordField(String newPassword)
-	{
+
+	public AdminUsersPage enterNewPasswordOnPasswordField(String newPassword) {
+
 		password.sendKeys(newPassword);
+		return this;
 	}
-	
-	public void selectUserType()
-	{
-		Select s=new Select(usertype);
-		s.selectByIndex(2);
+
+	public AdminUsersPage selectUserType() {
+		/*
+		 * Select s=new Select(usertype); s.selectByIndex(2);
+		 */
+		page.selectDropdownByIndex(usertype, 2);
+		return this;
 	}
-	
-	public void clickOnSaveButton()
-	{
+
+	public AdminUsersPage clickOnSaveButton() {
+
 		savebutton.click();
+		return this;
 	}
-	
-	public boolean checkAlertMessage()
-	{
+
+	public boolean checkAlertMessage() {
+
 		return alert.isDisplayed();
 	}
-	
-	public void clickOnSearchButton()
-	{
+
+	public AdminUsersPage clickOnSearchButton() {
+
 		searchbutton.click();
+		return this;
 	}
-	
-	public void enterUserNameInSearchField()
-	{
-		username1.sendKeys("sonasunny");
+
+	public AdminUsersPage enterUserNameInSearchField() {
+
+		username1.sendKeys(Constants.ADDEDUSERNAME);
+		return this;
 	}
-	
-	public void selectUserTypeInSearchField()
-	{
-		Select s=new Select(usertype1);
-		s.selectByValue("admin");
+
+	public AdminUsersPage selectUserTypeInSearchField() {
+		/*
+		 * Select s=new Select(usertype1);
+		 * s.selectByValue(Constants.ADMINUSERDROPDOWNVALUE);
+		 */
+		page.selectDropdownWithValue(usertype1, Constants.ADMINUSERDROPDOWNVALUE);
+		return this;
 	}
-	
-	public void clickOnSearchAdminUserButton()
-	{
+
+	public AdminUsersPage clickOnSearchAdminUserButton() {
+
 		searchadminuser.click();
+		return this;
 	}
-	
-	public String getTextFromThePage()
-	{
-		return text.getText();
+
+	public String getTextFromThePage() {
+
+		return checktext.getText();
 	}
-	
-	public void clickOnResetButton()
-	{
+
+	public AdminUsersPage clickOnResetButton() {
+
 		resetbutton.click();
+		return this;
 	}
-	
-	public boolean checkTitle()
-	{
+
+	public boolean checkTitle() {
+
 		return heading.isDisplayed();
 	}
 }
