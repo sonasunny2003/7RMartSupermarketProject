@@ -9,12 +9,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import constant.Constants;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUsersPage {
 
 	public WebDriver driver;
 
 	PageUtility page = new PageUtility();
+	WaitUtility wait=new WaitUtility();
 
 	public AdminUsersPage(WebDriver driver) {
 
@@ -53,6 +55,7 @@ public class AdminUsersPage {
 
 	public AdminUsersPage clickOnNewButton() {
 
+		wait.waitUntilElementToBeClickable(driver, newbutton);
 		page.clickElementByJS(driver, newbutton);
 		return this;
 	}

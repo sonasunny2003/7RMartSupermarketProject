@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-28T12:19:59 IST" name="Suite" finished-at="2025-07-28T12:20:07 IST" duration-ms="8092">
+  <suite started-at="2025-07-31T13:59:37 IST" name="Suite" finished-at="2025-07-31T13:59:45 IST" duration-ms="8172">
     <groups>
     </groups>
-    <test started-at="2025-07-28T12:19:59 IST" name="Test" finished-at="2025-07-28T12:20:07 IST" duration-ms="8092">
-      <class name="testScript.AdminUsersTest">
-        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:19:59 IST" name="browserLaunch" finished-at="2025-07-28T12:20:02 IST" duration-ms="2435" status="PASS">
+    <test started-at="2025-07-31T13:59:37 IST" name="Test" finished-at="2025-07-31T13:59:45 IST" duration-ms="8172">
+      <class name="testScript.HomeTest">
+        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.HomeTest@6f15d60e]" started-at="2025-07-31T13:59:37 IST" name="browserLaunch" finished-at="2025-07-31T13:59:41 IST" duration-ms="4096" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,197 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyResetOptionOnAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="verifyResetOptionOnAdminUsersPage" description="Verify that the user is able to reset the page by clicking the Reset button" finished-at="2025-07-28T12:20:02 IST" duration-ms="25" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testScript.AdminUsersTest.verifyResetOptionOnAdminUsersPage(AdminUsersTest.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
+        <test-method signature="verifyUserCanLogoutSuccessfully()[pri:0, instance:testScript.HomeTest@6f15d60e]" started-at="2025-07-31T13:59:41 IST" name="verifyUserCanLogoutSuccessfully" description="Verify the user can logout successfully" finished-at="2025-07-31T13:59:44 IST" duration-ms="2842" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyResetOptionOnAdminUsersPage -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="driverQuit" finished-at="2025-07-28T12:20:02 IST" duration-ms="671" status="PASS">
+        </test-method> <!-- verifyUserCanLogoutSuccessfully -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@6f15d60e]" started-at="2025-07-31T13:59:44 IST" name="driverQuit" finished-at="2025-07-31T13:59:45 IST" duration-ms="1133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyResetOptionOnAdminUsersPage status=FAILURE method=AdminUsersTest.verifyResetOptionOnAdminUsersPage()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanLogoutSuccessfully status=SUCCESS method=HomeTest.verifyUserCanLogoutSuccessfully()[pri:0, instance:testScript.HomeTest@6f15d60e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:02 IST" name="browserLaunch" finished-at="2025-07-28T12:20:04 IST" duration-ms="1760" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyTheUserCanSearchAddedAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:04 IST" name="verifyTheUserCanSearchAddedAdminUsers" description="Verify the user is able to find the added admin users through search" finished-at="2025-07-28T12:20:04 IST" duration-ms="5" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testScript.AdminUsersTest.verifyTheUserCanSearchAddedAdminUsers(AdminUsersTest.java:51)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserCanSearchAddedAdminUsers -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:04 IST" name="driverQuit" finished-at="2025-07-28T12:20:05 IST" duration-ms="726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheUserCanSearchAddedAdminUsers status=FAILURE method=AdminUsersTest.verifyTheUserCanSearchAddedAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="browserLaunch(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:05 IST" name="browserLaunch" finished-at="2025-07-28T12:20:06 IST" duration-ms="1673" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyWhetherTheUserIsAbleToAddNewAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:06 IST" name="verifyWhetherTheUserIsAbleToAddNewAdminUsers" description="Verify the user is able to add new admin users" finished-at="2025-07-28T12:20:06 IST" duration-ms="3" status="FAIL">
-          <exception class="java.io.FileNotFoundException">
-            <message>
-              <![CDATA[C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.FileNotFoundException: C:\Users\sona\git\7RMartSupermarketProject\7RMartSupermarketProject\src\test\resources\TestData.xlsx\src\test\resources\TestData.xlsx (The system cannot find the path specified)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-at testScript.AdminUsersTest.verifyWhetherTheUserIsAbleToAddNewAdminUsers(AdminUsersTest.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.FileNotFoundException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherTheUserIsAbleToAddNewAdminUsers -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@7bbc8656]" started-at="2025-07-28T12:20:06 IST" name="driverQuit" finished-at="2025-07-28T12:20:07 IST" duration-ms="726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherTheUserIsAbleToAddNewAdminUsers status=FAILURE method=AdminUsersTest.verifyWhetherTheUserIsAbleToAddNewAdminUsers()[pri:0, instance:testScript.AdminUsersTest@7bbc8656] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testScript.AdminUsersTest -->
+      </class> <!-- testScript.HomeTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

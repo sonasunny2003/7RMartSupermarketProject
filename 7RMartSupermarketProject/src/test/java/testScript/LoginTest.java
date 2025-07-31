@@ -74,7 +74,7 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actual, expected, Messages.INVALIDUSERNAMEERROR);
 	}
 
-	@Test(priority = 4, description = "Verifying user login with ivalid credentials", dataProvider = "loginprovider")
+	@Test(priority = 4, description = "Verifying user login with ivalid credentials", dataProvider = "loginProvider")
 	public void verifyLoginWithInvalidCredentials(String username, String password) throws IOException {
 
 		/*

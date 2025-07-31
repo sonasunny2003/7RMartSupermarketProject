@@ -6,7 +6,7 @@ public class Constants {
 			+ "\\src\\main\\resources\\config.properties";
 
 	public static final String TESTDATAFILE = System.getProperty("user.dir")
-			+ "\\src\\test\\resources\\TestData.xlsx\\src\\test\\resources\\TestData.xlsx";
+			+ "\\src\\test\\resources\\TestData.xlsx";
 	public static final String LOGINASSERTIONVALUE = "7rmart supermarket";
 
 	public static final String SEARCHCATEGORYVALUE = "Dress";
