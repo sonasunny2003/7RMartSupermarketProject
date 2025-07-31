@@ -7,12 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class LoginPage {
 
 	public WebDriver driver;
 
 	PageUtility page = new PageUtility();
+	WaitUtility wait=new WaitUtility();
 
 	public LoginPage(WebDriver driver) {
 
@@ -49,6 +51,7 @@ public class LoginPage {
 
 	public LoginPage selectCheckBox() {
 
+		wait.waitUntilElementToBeClickable(driver, checkbox);
 		page.clickElementByJS(driver, checkbox);
 		return this;
 	}
