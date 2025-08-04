@@ -36,11 +36,16 @@ public class Listeners extends BaseClass implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 
 		ITestListener.super.onTestFailure(result);
+		
 		extentTest.get().log(Status.FAIL, "Test Failed");
 		extentTest.get().fail(result.getThrowable());
+		
 		WebDriver driver = null;
+		
 		String testMethodName = result.getMethod().getMethodName();
+		
 		try {
+			
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver")
 					.get(result.getInstance());
 		} catch (IllegalArgumentException e) {
@@ -65,6 +70,7 @@ public class Listeners extends BaseClass implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
+		
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
 		String testMethodName = result.getMethod().getMethodName();
