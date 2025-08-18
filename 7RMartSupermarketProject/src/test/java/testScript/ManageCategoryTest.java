@@ -29,7 +29,7 @@ public class ManageCategoryTest extends BaseClass {
 		login.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password).selectCheckBox();
 		homepage = login.clickSignInButton();
 
-		homepage.clickOnManageCategoryTab();
+		category=homepage.clickOnManageCategoryTab();
 
 		category.clickSearchButton().enterTextInSearchCategory().clickSearchCategoryButton();
 
